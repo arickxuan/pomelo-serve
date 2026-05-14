@@ -1,6 +1,6 @@
 package remote
 
-import "framework/protocol"
+import "pomeloServe/framework/protocol"
 
 type Msg struct {
 	Cid         string

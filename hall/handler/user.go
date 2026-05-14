@@ -1,15 +1,15 @@
 package handler
 
 import (
-	"common"
-	"common/biz"
-	"common/logs"
-	"core/repo"
-	"core/service"
 	"encoding/json"
-	"framework/remote"
-	"hall/models/request"
-	"hall/models/response"
+	"pomeloServe/common"
+	"pomeloServe/common/biz"
+	"pomeloServe/common/logs"
+	"pomeloServe/core/repo"
+	"pomeloServe/core/service"
+	"pomeloServe/framework/remote"
+	"pomeloServe/hall/models/request"
+	"pomeloServe/hall/models/response"
 )
 
 type UserHandler struct {

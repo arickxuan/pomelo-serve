@@ -1,19 +1,20 @@
 package rpc
 
 import (
-	"common/config"
-	"common/discovery"
-	"common/logs"
 	"context"
 	"fmt"
+	"pomeloServe/common/config"
+	"pomeloServe/common/discovery"
+	"pomeloServe/common/logs"
+	"pomeloServe/proto/pd"
+
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/credentials/insecure"
 	"google.golang.org/grpc/resolver"
-	"user/pb"
 )
 
 var (
-	UserClient pb.UserServiceClient
+	UserClient pd.UserServiceClient
 )
 
 func Init() {
@@ -37,8 +38,8 @@ func initClient(name string, loadBalance bool, client interface{}) {
 		logs.Fatal("rpc connect etcd err:%v", err)
 	}
 	switch c := client.(type) {
-	case *pb.UserServiceClient:
-		*c = pb.NewUserServiceClient(conn)
+	case *pd.UserServiceClient:
+		*c = pd.NewUserServiceClient(conn)
 	default:
 		logs.Fatal("unsupported client type")
 	}

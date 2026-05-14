@@ -1,19 +1,20 @@
 package app
 
 import (
-	"common/config"
-	"common/discovery"
-	"common/logs"
 	"context"
-	"core/repo"
-	"google.golang.org/grpc"
 	"net"
 	"os"
 	"os/signal"
+	"pomeloServe/common/config"
+	"pomeloServe/common/discovery"
+	"pomeloServe/common/logs"
+	"pomeloServe/core/repo"
+	"pomeloServe/proto/pd"
+	"pomeloServe/user/internal/service"
 	"syscall"
 	"time"
-	"user/internal/service"
-	"user/pb"
+
+	"google.golang.org/grpc"
 )
 
 // Run 启动程序 启动grpc服务 启用http服务  启用日志 启用数据库
@@ -36,7 +37,7 @@ func Run(ctx context.Context) error {
 		if err != nil {
 			logs.Fatal("user grpc server register etcd err:%v", err)
 		}
-		pb.RegisterUserServiceServer(server, service.NewAccountService(manager))
+		pd.RegisterUserServiceServer(server, service.NewAccountService(manager))
 		//阻塞操作
 		err = server.Serve(lis)
 		if err != nil {

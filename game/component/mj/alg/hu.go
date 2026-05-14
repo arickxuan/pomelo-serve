@@ -1,6 +1,6 @@
 package alg
 
-import "game/component/mj/mp"
+import "pomeloServe/game/component/mj/mp"
 
 var table = NewTable()
 

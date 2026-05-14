@@ -1,0 +1,27 @@
+syntax = "proto3";
+package pd;
+
+import "google/api/annotations.proto";
+
+option csharp_namespace = "PomeloServe.User";
+option go_package = "proto/pd;pd"; //指定生成的位置和package
+
+message RegisterRequest {
+  string account = 1;
+  string password = 2;
+  int32 login_platform = 3;
+  string sms_code = 4;
+}
+
+message RegisterResponse {
+  string uid = 1;
+}
+
+service UserService {
+  rpc Register(RegisterRequest) returns (RegisterResponse) {
+    option (google.api.http) = {
+      post: "/v1/users" // 映射到 HTTP POST 方法
+      body: "*"
+    };
+  }
+}

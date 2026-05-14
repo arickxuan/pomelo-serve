@@ -1,16 +1,17 @@
 package mj
 
 import (
-	"common/logs"
-	"common/utils"
 	"encoding/json"
-	"framework/remote"
-	"game/component/base"
-	"game/component/mj/mp"
-	"game/component/proto"
-	"github.com/jinzhu/copier"
+	"pomeloServe/common/logs"
+	"pomeloServe/common/utils"
+	"pomeloServe/framework/remote"
+	"pomeloServe/game/component/base"
+	"pomeloServe/game/component/mj/mp"
+	"pomeloServe/game/component/proto"
 	"sync"
 	"time"
+
+	"github.com/jinzhu/copier"
 )
 
 type GameFrame struct {

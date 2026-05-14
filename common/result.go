@@ -1,10 +1,11 @@
 package common
 
 import (
-	"common/biz"
-	"framework/msError"
-	"github.com/gin-gonic/gin"
 	"net/http"
+	"pomeloServe/common/biz"
+	"pomeloServe/framework/msError"
+
+	"github.com/gin-gonic/gin"
 )
 
 type Result struct {

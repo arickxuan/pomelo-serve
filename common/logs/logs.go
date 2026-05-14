@@ -1,10 +1,11 @@
 package logs
 
 import (
-	"common/config"
-	"github.com/charmbracelet/log"
 	"os"
+	"pomeloServe/common/config"
 	"time"
+
+	"github.com/charmbracelet/log"
 )
 
 var logger *log.Logger

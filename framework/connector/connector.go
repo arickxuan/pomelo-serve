@@ -1,11 +1,11 @@
 package connector
 
 import (
-	"common/logs"
 	"fmt"
-	"framework/game"
-	"framework/net"
-	"framework/remote"
+	"pomeloServe/common/logs"
+	"pomeloServe/framework/game"
+	"pomeloServe/framework/net"
+	"pomeloServe/framework/remote"
 )
 
 type Connector struct {

@@ -1,9 +1,9 @@
 package remote
 
 import (
-	"common/logs"
 	"encoding/json"
-	"framework/protocol"
+	"pomeloServe/common/logs"
+	"pomeloServe/framework/protocol"
 	"sync"
 )
 

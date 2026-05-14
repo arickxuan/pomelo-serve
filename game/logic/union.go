@@ -1,12 +1,12 @@
 package logic
 
 import (
-	"core/models/entity"
-	"core/service"
-	"framework/msError"
-	"framework/remote"
-	"game/component/room"
-	"game/models/request"
+	"pomeloServe/core/models/entity"
+	"pomeloServe/core/service"
+	"pomeloServe/framework/msError"
+	"pomeloServe/framework/remote"
+	"pomeloServe/game/component/room"
+	"pomeloServe/game/models/request"
 	"sync"
 )
 

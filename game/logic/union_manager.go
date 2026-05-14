@@ -1,13 +1,13 @@
 package logic
 
 import (
-	"common/biz"
-	"core/models/entity"
 	"fmt"
-	"framework/msError"
-	"framework/remote"
-	"game/component/room"
 	"math/rand"
+	"pomeloServe/common/biz"
+	"pomeloServe/core/models/entity"
+	"pomeloServe/framework/msError"
+	"pomeloServe/framework/remote"
+	"pomeloServe/game/component/room"
 	"sync"
 	"time"
 )

@@ -1,14 +1,14 @@
 package main
 
 import (
-	"common/config"
-	"common/metrics"
 	"context"
 	"flag"
 	"fmt"
-	"gate/app"
 	"log"
 	"os"
+	"pomeloServe/common/config"
+	"pomeloServe/common/metrics"
+	"pomeloServe/gate/app"
 )
 
 var configFile = flag.String("config", "application.yml", "config file")

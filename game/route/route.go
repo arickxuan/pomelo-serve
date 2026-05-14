@@ -1,10 +1,10 @@
 package route
 
 import (
-	"core/repo"
-	"framework/node"
-	"game/handler"
-	"game/logic"
+	"pomeloServe/core/repo"
+	"pomeloServe/framework/node"
+	"pomeloServe/game/handler"
+	"pomeloServe/game/logic"
 )
 
 func Register(r *repo.Manager) node.LogicHandler {

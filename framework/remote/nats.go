@@ -1,8 +1,9 @@
 package remote
 
 import (
-	"common/logs"
-	"framework/game"
+	"pomeloServe/common/logs"
+	"pomeloServe/framework/game"
+
 	"github.com/nats-io/nats.go"
 )
 

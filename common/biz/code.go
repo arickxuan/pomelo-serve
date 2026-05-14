@@ -2,7 +2,7 @@ package biz
 
 import (
 	"errors"
-	"framework/msError"
+	"pomeloServe/framework/msError"
 )
 
 const OK = 0

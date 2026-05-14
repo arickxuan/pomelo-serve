@@ -1,15 +1,16 @@
 package game
 
 import (
-	"common/logs"
 	"encoding/json"
 	"fmt"
-	"github.com/fsnotify/fsnotify"
-	"github.com/spf13/viper"
 	"io"
 	"log"
 	"os"
 	"path"
+	"pomeloServe/common/logs"
+
+	"github.com/fsnotify/fsnotify"
+	"github.com/spf13/viper"
 )
 
 var Conf *Config

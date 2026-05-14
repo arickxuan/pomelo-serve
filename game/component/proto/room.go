@@ -1,6 +1,6 @@
 package proto
 
-import "core/models/entity"
+import "pomeloServe/core/models/entity"
 
 type RoomCreator struct {
 	Uid         string      `json:"uid"`
