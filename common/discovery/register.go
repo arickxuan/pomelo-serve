@@ -5,8 +5,9 @@ import (
 	"common/logs"
 	"context"
 	"encoding/json"
-	clientv3 "go.etcd.io/etcd/client/v3"
 	"time"
+
+	clientv3 "go.etcd.io/etcd/client/v3"
 )
 
 // Register grpc服务注册到etcd
