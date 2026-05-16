@@ -1,11 +1,15 @@
 package codec
 
 import (
+	"errors"
+
 	"google.golang.org/protobuf/encoding/protojson"
 	"google.golang.org/protobuf/proto"
 )
 
 type ProtoDecode struct{}
+
+var ErrInvalidProtoMessage = errors.New("proto decode error, is not valid proto message")
 
 func (c *ProtoDecode) Decode(data []byte, in interface{}) error {
 	pb, ok := in.(proto.Message)

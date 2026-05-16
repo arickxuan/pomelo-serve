@@ -9,10 +9,11 @@ import (
 	"common/rpc"
 	"context"
 	"framework/msError"
+	"proto/pb"
+	"time"
+
 	"github.com/gin-gonic/gin"
 	"github.com/golang-jwt/jwt/v5"
-	"time"
-	"user/pb"
 )
 
 type UserHandler struct {
@@ -24,7 +25,7 @@ func NewUserHandler() *UserHandler {
 
 func (u *UserHandler) Register(ctx *gin.Context) {
 	//接收参数
-	var req pb.RegisterParams
+	var req pb.RegisterRequest
 	err2 := ctx.ShouldBindJSON(&req)
 	if err2 != nil {
 		common.Fail(ctx, biz.RequestDataError)

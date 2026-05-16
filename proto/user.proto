@@ -17,11 +17,26 @@ message RegisterResponse {
   string uid = 1;
 }
 
+message InfoRequest {
+  string username = 1;
+}
+
+message InfoResponse {
+  string uid = 1;
+  string username = 2;
+  int32 login_platform = 3;
+}
+
 service UserService {
   rpc Register(RegisterRequest) returns (RegisterResponse) {
     option (google.api.http) = {
       post: "/v1/users" // 映射到 HTTP POST 方法
       body: "*"
+    };
+  }
+  rpc Info(InfoRequest) returns (InfoResponse) {
+    option (google.api.http) = {
+      get: "/v1/users/{username}" // 映射到 HTTP GET 方法
     };
   }
 }

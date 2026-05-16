@@ -134,6 +134,110 @@ func (x *RegisterResponse) GetUid() string {
 	return ""
 }
 
+type InfoRequest struct {
+	state         protoimpl.MessageState `protogen:"open.v1"`
+	Username      string                 `protobuf:"bytes,1,opt,name=username,proto3" json:"username,omitempty"`
+	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
+}
+
+func (x *InfoRequest) Reset() {
+	*x = InfoRequest{}
+	mi := &file_user_proto_msgTypes[2]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *InfoRequest) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*InfoRequest) ProtoMessage() {}
+
+func (x *InfoRequest) ProtoReflect() protoreflect.Message {
+	mi := &file_user_proto_msgTypes[2]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use InfoRequest.ProtoReflect.Descriptor instead.
+func (*InfoRequest) Descriptor() ([]byte, []int) {
+	return file_user_proto_rawDescGZIP(), []int{2}
+}
+
+func (x *InfoRequest) GetUsername() string {
+	if x != nil {
+		return x.Username
+	}
+	return ""
+}
+
+type InfoResponse struct {
+	state         protoimpl.MessageState `protogen:"open.v1"`
+	Uid           string                 `protobuf:"bytes,1,opt,name=uid,proto3" json:"uid,omitempty"`
+	Username      string                 `protobuf:"bytes,2,opt,name=username,proto3" json:"username,omitempty"`
+	LoginPlatform int32                  `protobuf:"varint,3,opt,name=login_platform,json=loginPlatform,proto3" json:"login_platform,omitempty"`
+	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
+}
+
+func (x *InfoResponse) Reset() {
+	*x = InfoResponse{}
+	mi := &file_user_proto_msgTypes[3]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *InfoResponse) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*InfoResponse) ProtoMessage() {}
+
+func (x *InfoResponse) ProtoReflect() protoreflect.Message {
+	mi := &file_user_proto_msgTypes[3]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use InfoResponse.ProtoReflect.Descriptor instead.
+func (*InfoResponse) Descriptor() ([]byte, []int) {
+	return file_user_proto_rawDescGZIP(), []int{3}
+}
+
+func (x *InfoResponse) GetUid() string {
+	if x != nil {
+		return x.Uid
+	}
+	return ""
+}
+
+func (x *InfoResponse) GetUsername() string {
+	if x != nil {
+		return x.Username
+	}
+	return ""
+}
+
+func (x *InfoResponse) GetLoginPlatform() int32 {
+	if x != nil {
+		return x.LoginPlatform
+	}
+	return 0
+}
+
 var File_user_proto protoreflect.FileDescriptor
 
 const file_user_proto_rawDesc = "" +
@@ -146,9 +250,16 @@ const file_user_proto_rawDesc = "" +
 	"\x0elogin_platform\x18\x03 \x01(\x05R\rloginPlatform\x12\x19\n" +
 	"\bsms_code\x18\x04 \x01(\tR\asmsCode\"$\n" +
 	"\x10RegisterResponse\x12\x10\n" +
-	"\x03uid\x18\x01 \x01(\tR\x03uid2Z\n" +
+	"\x03uid\x18\x01 \x01(\tR\x03uid\")\n" +
+	"\vInfoRequest\x12\x1a\n" +
+	"\busername\x18\x01 \x01(\tR\busername\"c\n" +
+	"\fInfoResponse\x12\x10\n" +
+	"\x03uid\x18\x01 \x01(\tR\x03uid\x12\x1a\n" +
+	"\busername\x18\x02 \x01(\tR\busername\x12%\n" +
+	"\x0elogin_platform\x18\x03 \x01(\x05R\rloginPlatform2\xa3\x01\n" +
 	"\vUserService\x12K\n" +
-	"\bRegister\x12\x13.pb.RegisterRequest\x1a\x14.pb.RegisterResponse\"\x14\x82\xd3\xe4\x93\x02\x0e:\x01*\"\t/v1/usersBH\n" +
+	"\bRegister\x12\x13.pb.RegisterRequest\x1a\x14.pb.RegisterResponse\"\x14\x82\xd3\xe4\x93\x02\x0e:\x01*\"\t/v1/users\x12G\n" +
+	"\x04Info\x12\x0f.pb.InfoRequest\x1a\x10.pb.InfoResponse\"\x1c\x82\xd3\xe4\x93\x02\x16\x12\x14/v1/users/{username}BH\n" +
 	"\x06com.pbB\tUserProtoP\x01Z\vproto/pb;pb\xa2\x02\x03PXX\xaa\x02\x02Pb\xca\x02\x02Pb\xe2\x02\x0ePb\\GPBMetadata\xea\x02\x02Pbb\x06proto3"
 
 var (
@@ -163,16 +274,20 @@ func file_user_proto_rawDescGZIP() []byte {
 	return file_user_proto_rawDescData
 }
 
-var file_user_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
+var file_user_proto_msgTypes = make([]protoimpl.MessageInfo, 4)
 var file_user_proto_goTypes = []any{
 	(*RegisterRequest)(nil),  // 0: pb.RegisterRequest
 	(*RegisterResponse)(nil), // 1: pb.RegisterResponse
+	(*InfoRequest)(nil),      // 2: pb.InfoRequest
+	(*InfoResponse)(nil),     // 3: pb.InfoResponse
 }
 var file_user_proto_depIdxs = []int32{
 	0, // 0: pb.UserService.Register:input_type -> pb.RegisterRequest
-	1, // 1: pb.UserService.Register:output_type -> pb.RegisterResponse
-	1, // [1:2] is the sub-list for method output_type
-	0, // [0:1] is the sub-list for method input_type
+	2, // 1: pb.UserService.Info:input_type -> pb.InfoRequest
+	1, // 2: pb.UserService.Register:output_type -> pb.RegisterResponse
+	3, // 3: pb.UserService.Info:output_type -> pb.InfoResponse
+	2, // [2:4] is the sub-list for method output_type
+	0, // [0:2] is the sub-list for method input_type
 	0, // [0:0] is the sub-list for extension type_name
 	0, // [0:0] is the sub-list for extension extendee
 	0, // [0:0] is the sub-list for field type_name
@@ -189,7 +304,7 @@ func file_user_proto_init() {
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
 			RawDescriptor: unsafe.Slice(unsafe.StringData(file_user_proto_rawDesc), len(file_user_proto_rawDesc)),
 			NumEnums:      0,
-			NumMessages:   2,
+			NumMessages:   4,
 			NumExtensions: 0,
 			NumServices:   1,
 		},

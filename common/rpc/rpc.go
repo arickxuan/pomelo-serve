@@ -6,10 +6,11 @@ import (
 	"common/logs"
 	"context"
 	"fmt"
+	"proto/pb"
+
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/credentials/insecure"
 	"google.golang.org/grpc/resolver"
-	"user/pb"
 )
 
 var (
