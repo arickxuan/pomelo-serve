@@ -1,8 +1,8 @@
 package base
 
 import (
-	"pomeloServe/framework/remote"
-	"pomeloServe/game/component/proto"
+	"framework/remote"
+	"game/component/proto"
 )
 
 type RoomFrame interface {

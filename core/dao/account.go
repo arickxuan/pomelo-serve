@@ -2,8 +2,8 @@ package dao
 
 import (
 	"context"
-	"pomeloServe/core/models/entity"
-	"pomeloServe/core/repo"
+	"core/models/entity"
+	"core/repo"
 )
 
 type AccountDao struct {

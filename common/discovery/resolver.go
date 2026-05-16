@@ -1,14 +1,13 @@
 package discovery
 
 import (
+	"common/config"
+	"common/logs"
 	"context"
-	"pomeloServe/common/config"
-	"pomeloServe/common/logs"
-	"time"
-
 	clientv3 "go.etcd.io/etcd/client/v3"
 	"google.golang.org/grpc/attributes"
 	"google.golang.org/grpc/resolver"
+	"time"
 )
 
 type Resolver struct {

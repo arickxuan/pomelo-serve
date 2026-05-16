@@ -9,7 +9,7 @@ using pb = global::Google.Protobuf;
 using pbc = global::Google.Protobuf.Collections;
 using pbr = global::Google.Protobuf.Reflection;
 using scg = global::System.Collections.Generic;
-namespace Pd {
+namespace Pb {
 
   /// <summary>Holder for reflection information generated from user.proto</summary>
   public static partial class UserReflection {
@@ -24,20 +24,20 @@ namespace Pd {
     static UserReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Cgp1c2VyLnByb3RvEgJwZBocZ29vZ2xlL2FwaS9hbm5vdGF0aW9ucy5wcm90",
+            "Cgp1c2VyLnByb3RvEgJwYhocZ29vZ2xlL2FwaS9hbm5vdGF0aW9ucy5wcm90",
             "byKJAQoPUmVnaXN0ZXJSZXF1ZXN0EhgKB2FjY291bnQYASABKAlSB2FjY291",
             "bnQSGgoIcGFzc3dvcmQYAiABKAlSCHBhc3N3b3JkEiUKDmxvZ2luX3BsYXRm",
             "b3JtGAMgASgFUg1sb2dpblBsYXRmb3JtEhkKCHNtc19jb2RlGAQgASgJUgdz",
             "bXNDb2RlIiQKEFJlZ2lzdGVyUmVzcG9uc2USEAoDdWlkGAEgASgJUgN1aWQy",
-            "WgoLVXNlclNlcnZpY2USSwoIUmVnaXN0ZXISEy5wZC5SZWdpc3RlclJlcXVl",
-            "c3QaFC5wZC5SZWdpc3RlclJlc3BvbnNlIhSC0+STAg4iCS92MS91c2VyczoB",
-            "KkJICgZjb20ucGRCCVVzZXJQcm90b1ABWgtwcm90by9wZDtwZKICA1BYWKoC",
-            "AlBkygICUGTiAg5QZFxHUEJNZXRhZGF0YeoCAlBkYgZwcm90bzM="));
+            "WgoLVXNlclNlcnZpY2USSwoIUmVnaXN0ZXISEy5wYi5SZWdpc3RlclJlcXVl",
+            "c3QaFC5wYi5SZWdpc3RlclJlc3BvbnNlIhSC0+STAg4iCS92MS91c2VyczoB",
+            "KkJICgZjb20ucGJCCVVzZXJQcm90b1ABWgtwcm90by9wYjtwYqICA1BYWKoC",
+            "AlBiygICUGLiAg5QYlxHUEJNZXRhZGF0YeoCAlBiYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Pd.RegisterRequest), global::Pd.RegisterRequest.Parser, new[]{ "Account", "Password", "LoginPlatform", "SmsCode" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Pd.RegisterResponse), global::Pd.RegisterResponse.Parser, new[]{ "Uid" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Pb.RegisterRequest), global::Pb.RegisterRequest.Parser, new[]{ "Account", "Password", "LoginPlatform", "SmsCode" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Pb.RegisterResponse), global::Pb.RegisterResponse.Parser, new[]{ "Uid" }, null, null, null, null)
           }));
     }
     #endregion
@@ -59,7 +59,7 @@ namespace Pd {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Pd.UserReflection.Descriptor.MessageTypes[0]; }
+      get { return global::Pb.UserReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -368,7 +368,7 @@ namespace Pd {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Pd.UserReflection.Descriptor.MessageTypes[1]; }
+      get { return global::Pb.UserReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

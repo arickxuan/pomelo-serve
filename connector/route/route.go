@@ -1,9 +1,9 @@
 package route
 
 import (
-	"pomeloServe/connector/handler"
-	"pomeloServe/core/repo"
-	"pomeloServe/framework/net"
+	"connector/handler"
+	"core/repo"
+	"framework/net"
 )
 
 func Register(r *repo.Manager) net.LogicHandler {

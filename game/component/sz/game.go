@@ -1,15 +1,14 @@
 package sz
 
 import (
+	"common/logs"
+	"common/utils"
 	"encoding/json"
-	"pomeloServe/common/logs"
-	"pomeloServe/common/utils"
-	"pomeloServe/framework/remote"
-	"pomeloServe/game/component/base"
-	"pomeloServe/game/component/proto"
-	"time"
-
+	"framework/remote"
+	"game/component/base"
+	"game/component/proto"
 	"github.com/jinzhu/copier"
+	"time"
 )
 
 type GameFrame struct {

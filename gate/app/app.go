@@ -1,13 +1,13 @@
 package app
 
 import (
+	"common/config"
+	"common/logs"
 	"context"
 	"fmt"
+	"gate/router"
 	"os"
 	"os/signal"
-	"pomeloServe/common/config"
-	"pomeloServe/common/logs"
-	"pomeloServe/gate/router"
 	"syscall"
 	"time"
 )

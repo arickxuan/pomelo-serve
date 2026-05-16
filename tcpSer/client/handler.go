@@ -2,8 +2,8 @@ package main
 
 import (
 	"fmt"
-	"pomeloServe/framework/net"
-	"pomeloServe/proto/pd"
+	"framework/net"
+	pb "proto/pb"
 
 	"google.golang.org/protobuf/proto"
 )
@@ -16,7 +16,7 @@ func (c *Client) Login(param *InputParam) {
 	fmt.Println("Login input Handler print")
 	fmt.Println(param.Command)
 	fmt.Println(param.Param)
-	req := &pd.RegisterRequest{
+	req := &pb.RegisterRequest{
 		Account:       "message",
 		Password:      "123456",
 		LoginPlatform: 3,
@@ -29,7 +29,7 @@ func (c *Client) Login(param *InputParam) {
 	fmt.Println(string(msg))
 	pkg := &net.ProtoMessage{
 		Data: msg,
-		ID:   uint64(pd.MessageId_CSLogin),
+		ID:   uint64(pb.MessageId_CSLogin),
 	}
 
 	bytes, err := c.packer.Pack(pkg)

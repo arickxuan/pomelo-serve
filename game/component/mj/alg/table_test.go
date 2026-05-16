@@ -2,7 +2,7 @@ package alg
 
 import (
 	"fmt"
-	"pomeloServe/game/component/mj/mp"
+	"game/component/mj/mp"
 	"testing"
 )
 

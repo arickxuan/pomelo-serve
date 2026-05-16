@@ -1,6 +1,6 @@
 package request
 
-import "pomeloServe/game/component/proto"
+import "game/component/proto"
 
 type CreateRoomReq struct {
 	UnionID    int64          `json:"unionID"` // 1 普通用户创建

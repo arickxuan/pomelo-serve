@@ -1,6 +1,6 @@
 package mj
 
-import "pomeloServe/game/component/mj/mp"
+import "game/component/mj/mp"
 
 type MessageReq struct {
 	Type int         `json:"type"`

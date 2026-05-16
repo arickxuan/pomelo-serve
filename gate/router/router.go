@@ -1,11 +1,10 @@
 package router
 
 import (
-	"pomeloServe/common/config"
-	"pomeloServe/common/rpc"
-	"pomeloServe/gate/api"
-	"pomeloServe/gate/auth"
-
+	"common/config"
+	"common/rpc"
+	"gate/api"
+	"gate/auth"
 	"github.com/gin-gonic/gin"
 )
 

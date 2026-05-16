@@ -1,7 +1,7 @@
 package sz
 
 import (
-	"pomeloServe/common/utils"
+	"common/utils"
 	"sort"
 	"sync"
 )

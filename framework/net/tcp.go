@@ -8,7 +8,7 @@ import (
 
 	"google.golang.org/protobuf/proto"
 
-	"pomeloServe/proto/pd"
+	pb "proto/pb"
 )
 
 func NewTcpServerback(port string) {
@@ -61,7 +61,7 @@ func handleConnection(conn net.Conn) {
 		message = strings.TrimSpace(message)
 		fmt.Printf("收到消息: %s\n", message)
 
-		req := &pd.RegisterRequest{}
+		req := &pb.RegisterRequest{}
 		err = proto.Unmarshal([]byte(message), req)
 		if err != nil {
 			fmt.Println("解析请求失败:", err)
@@ -83,7 +83,7 @@ func handleConnection(conn net.Conn) {
 
 type Server struct {
 	tcpListener net.Listener
-	Handlers    map[pd.MessageId]func(message *SessionPacket)
+	Handlers    map[pb.MessageId]func(message *SessionPacket)
 	//OnSessionPacket func(packet *SessionPacket)
 }
 
@@ -100,27 +100,27 @@ func (mm *Server) SendMsg(id uint64, session *TcpSession, message proto.Message)
 }
 
 func (mm *Server) OnSessionPacket(packet *SessionPacket) {
-	fmt.Println("msg id ", packet.Msg.ID, " id ", pd.MessageId(packet.Msg.ID), mm.Handlers)
-	if handler, ok := mm.Handlers[pd.MessageId(packet.Msg.ID)]; ok {
+	fmt.Println("msg id ", packet.Msg.ID, " id ", pb.MessageId(packet.Msg.ID), mm.Handlers)
+	if handler, ok := mm.Handlers[pb.MessageId(packet.Msg.ID)]; ok {
 		handler(packet)
 		return
 	}
 }
 
 func (mm *Server) HandlerRegister() {
-	mm.Handlers[pd.MessageId_CSLogin] = mm.CSLogin
-	//mm.Handlers[pd.MessageId_CSAddFriend] = mm.UserLogin
+	mm.Handlers[pb.MessageId_CSLogin] = mm.CSLogin
+	//mm.Handlers[pb.MessageId_CSAddFriend] = mm.UserLogin
 }
 
 func (mm *Server) CSLogin(message *SessionPacket) {
 
-	msg := &pd.RegisterRequest{}
+	msg := &pb.RegisterRequest{}
 	err := proto.Unmarshal(message.Msg.Data, msg)
 	if err != nil {
 		return
 	}
 	fmt.Println("[MgrMgr.CreatePlayer]", msg)
-	mm.SendMsg(uint64(pd.MessageId_CSLogin), message.Sess, &pd.RegisterRequest{
+	mm.SendMsg(uint64(pb.MessageId_CSLogin), message.Sess, &pb.RegisterRequest{
 		Account:       "arick",
 		Password:      "666",
 		LoginPlatform: 4,
@@ -141,7 +141,7 @@ func NewTcpServer(address string) *Server {
 	fmt.Println("listen tcp:", resolveTCPAddr)
 	s := &Server{}
 	s.tcpListener = tcpListener
-	s.Handlers = make(map[pd.MessageId]func(message *SessionPacket))
+	s.Handlers = make(map[pb.MessageId]func(message *SessionPacket))
 	s.HandlerRegister()
 	return s
 

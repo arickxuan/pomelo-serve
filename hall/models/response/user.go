@@ -1,8 +1,8 @@
 package response
 
 import (
-	"pomeloServe/common"
-	"pomeloServe/hall/models/request"
+	"common"
+	"hall/models/request"
 )
 
 type UpdateUserAddressRes struct {

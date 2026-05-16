@@ -1,6 +1,6 @@
 package repo
 
-import "pomeloServe/common/database"
+import "common/database"
 
 type Manager struct {
 	Mongo *database.MongoManager

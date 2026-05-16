@@ -4,7 +4,7 @@
 // 	protoc        (unknown)
 // source: user.proto
 
-package pd
+package pb
 
 import (
 	_ "google.golang.org/genproto/googleapis/api/annotations"
@@ -139,7 +139,7 @@ var File_user_proto protoreflect.FileDescriptor
 const file_user_proto_rawDesc = "" +
 	"\n" +
 	"\n" +
-	"user.proto\x12\x02pd\x1a\x1cgoogle/api/annotations.proto\"\x89\x01\n" +
+	"user.proto\x12\x02pb\x1a\x1cgoogle/api/annotations.proto\"\x89\x01\n" +
 	"\x0fRegisterRequest\x12\x18\n" +
 	"\aaccount\x18\x01 \x01(\tR\aaccount\x12\x1a\n" +
 	"\bpassword\x18\x02 \x01(\tR\bpassword\x12%\n" +
@@ -148,8 +148,8 @@ const file_user_proto_rawDesc = "" +
 	"\x10RegisterResponse\x12\x10\n" +
 	"\x03uid\x18\x01 \x01(\tR\x03uid2Z\n" +
 	"\vUserService\x12K\n" +
-	"\bRegister\x12\x13.pd.RegisterRequest\x1a\x14.pd.RegisterResponse\"\x14\x82\xd3\xe4\x93\x02\x0e:\x01*\"\t/v1/usersBH\n" +
-	"\x06com.pdB\tUserProtoP\x01Z\vproto/pd;pd\xa2\x02\x03PXX\xaa\x02\x02Pd\xca\x02\x02Pd\xe2\x02\x0ePd\\GPBMetadata\xea\x02\x02Pdb\x06proto3"
+	"\bRegister\x12\x13.pb.RegisterRequest\x1a\x14.pb.RegisterResponse\"\x14\x82\xd3\xe4\x93\x02\x0e:\x01*\"\t/v1/usersBH\n" +
+	"\x06com.pbB\tUserProtoP\x01Z\vproto/pb;pb\xa2\x02\x03PXX\xaa\x02\x02Pb\xca\x02\x02Pb\xe2\x02\x0ePb\\GPBMetadata\xea\x02\x02Pbb\x06proto3"
 
 var (
 	file_user_proto_rawDescOnce sync.Once
@@ -165,12 +165,12 @@ func file_user_proto_rawDescGZIP() []byte {
 
 var file_user_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
 var file_user_proto_goTypes = []any{
-	(*RegisterRequest)(nil),  // 0: pd.RegisterRequest
-	(*RegisterResponse)(nil), // 1: pd.RegisterResponse
+	(*RegisterRequest)(nil),  // 0: pb.RegisterRequest
+	(*RegisterResponse)(nil), // 1: pb.RegisterResponse
 }
 var file_user_proto_depIdxs = []int32{
-	0, // 0: pd.UserService.Register:input_type -> pd.RegisterRequest
-	1, // 1: pd.UserService.Register:output_type -> pd.RegisterResponse
+	0, // 0: pb.UserService.Register:input_type -> pb.RegisterRequest
+	1, // 1: pb.UserService.Register:output_type -> pb.RegisterResponse
 	1, // [1:2] is the sub-list for method output_type
 	0, // [0:1] is the sub-list for method input_type
 	0, // [0:0] is the sub-list for extension type_name

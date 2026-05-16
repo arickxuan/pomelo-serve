@@ -1,16 +1,15 @@
 package main
 
 import (
+	"common/config"
+	"common/metrics"
+	"connector/app"
 	"context"
 	"fmt"
+	"framework/game"
+	"github.com/spf13/cobra"
 	"log"
 	"os"
-	"pomeloServe/common/config"
-	"pomeloServe/common/metrics"
-	"pomeloServe/connector/app"
-	"pomeloServe/framework/game"
-
-	"github.com/spf13/cobra"
 )
 
 var rootCmd = &cobra.Command{

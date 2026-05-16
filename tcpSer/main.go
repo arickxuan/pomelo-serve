@@ -1,6 +1,6 @@
 package main
 
-import "pomeloServe/framework/net"
+import "framework/net"
 
 func main() {
 	server := net.NewTcpServer(":8080")

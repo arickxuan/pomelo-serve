@@ -1,0 +1,15 @@
+go 1.25.0
+
+use (
+	common
+	connector
+	core
+	framework
+	game
+	gate
+	gateway
+	hall
+	proto
+	tcpSer
+	user
+)

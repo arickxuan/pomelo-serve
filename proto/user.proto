@@ -1,10 +1,10 @@
 syntax = "proto3";
-package pd;
+package pb;
 
 import "google/api/annotations.proto";
 
 option csharp_namespace = "PomeloServe.User";
-option go_package = "proto/pd;pd"; //指定生成的位置和package
+option go_package = "proto/pb;pb"; //指定生成的位置和package
 
 message RegisterRequest {
   string account = 1;

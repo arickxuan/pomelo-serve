@@ -1,14 +1,14 @@
 package app
 
 import (
+	"common/config"
+	"common/logs"
 	"context"
+	"core/repo"
+	"framework/node"
+	"hall/route"
 	"os"
 	"os/signal"
-	"pomeloServe/common/config"
-	"pomeloServe/common/logs"
-	"pomeloServe/core/repo"
-	"pomeloServe/framework/node"
-	"pomeloServe/hall/route"
 	"syscall"
 	"time"
 )

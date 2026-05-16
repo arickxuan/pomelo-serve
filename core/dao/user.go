@@ -2,9 +2,8 @@ package dao
 
 import (
 	"context"
-	"pomeloServe/core/models/entity"
-	"pomeloServe/core/repo"
-
+	"core/models/entity"
+	"core/repo"
 	"go.mongodb.org/mongo-driver/bson"
 	"go.mongodb.org/mongo-driver/mongo"
 )

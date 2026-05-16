@@ -7,10 +7,10 @@
 
 using grpc = global::Grpc.Core;
 
-namespace Pd {
+namespace Pb {
   public static partial class UserService
   {
-    static readonly string __ServiceName = "pd.UserService";
+    static readonly string __ServiceName = "pb.UserService";
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
@@ -46,22 +46,22 @@ namespace Pd {
     }
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::Pd.RegisterRequest> __Marshaller_pd_RegisterRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Pd.RegisterRequest.Parser));
+    static readonly grpc::Marshaller<global::Pb.RegisterRequest> __Marshaller_pb_RegisterRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Pb.RegisterRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::Pd.RegisterResponse> __Marshaller_pd_RegisterResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Pd.RegisterResponse.Parser));
+    static readonly grpc::Marshaller<global::Pb.RegisterResponse> __Marshaller_pb_RegisterResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Pb.RegisterResponse.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Method<global::Pd.RegisterRequest, global::Pd.RegisterResponse> __Method_Register = new grpc::Method<global::Pd.RegisterRequest, global::Pd.RegisterResponse>(
+    static readonly grpc::Method<global::Pb.RegisterRequest, global::Pb.RegisterResponse> __Method_Register = new grpc::Method<global::Pb.RegisterRequest, global::Pb.RegisterResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
         "Register",
-        __Marshaller_pd_RegisterRequest,
-        __Marshaller_pd_RegisterResponse);
+        __Marshaller_pb_RegisterRequest,
+        __Marshaller_pb_RegisterResponse);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
     {
-      get { return global::Pd.UserReflection.Descriptor.Services[0]; }
+      get { return global::Pb.UserReflection.Descriptor.Services[0]; }
     }
 
     /// <summary>Base class for server-side implementations of UserService</summary>
@@ -69,7 +69,7 @@ namespace Pd {
     public abstract partial class UserServiceBase
     {
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::System.Threading.Tasks.Task<global::Pd.RegisterResponse> Register(global::Pd.RegisterRequest request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::Pb.RegisterResponse> Register(global::Pb.RegisterRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -104,22 +104,22 @@ namespace Pd {
       }
 
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::Pd.RegisterResponse Register(global::Pd.RegisterRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual global::Pb.RegisterResponse Register(global::Pb.RegisterRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return Register(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::Pd.RegisterResponse Register(global::Pd.RegisterRequest request, grpc::CallOptions options)
+      public virtual global::Pb.RegisterResponse Register(global::Pb.RegisterRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_Register, null, options, request);
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::Pd.RegisterResponse> RegisterAsync(global::Pd.RegisterRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Pb.RegisterResponse> RegisterAsync(global::Pb.RegisterRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return RegisterAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::Pd.RegisterResponse> RegisterAsync(global::Pd.RegisterRequest request, grpc::CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::Pb.RegisterResponse> RegisterAsync(global::Pb.RegisterRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_Register, null, options, request);
       }
@@ -147,7 +147,7 @@ namespace Pd {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static void BindService(grpc::ServiceBinderBase serviceBinder, UserServiceBase serviceImpl)
     {
-      serviceBinder.AddMethod(__Method_Register, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Pd.RegisterRequest, global::Pd.RegisterResponse>(serviceImpl.Register));
+      serviceBinder.AddMethod(__Method_Register, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Pb.RegisterRequest, global::Pb.RegisterResponse>(serviceImpl.Register));
     }
 
   }

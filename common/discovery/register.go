@@ -1,10 +1,10 @@
 package discovery
 
 import (
+	"common/config"
+	"common/logs"
 	"context"
 	"encoding/json"
-	"pomeloServe/common/config"
-	"pomeloServe/common/logs"
 	"time"
 
 	clientv3 "go.etcd.io/etcd/client/v3"

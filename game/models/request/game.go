@@ -1,6 +1,6 @@
 package request
 
-import "pomeloServe/game/component/proto"
+import "game/component/proto"
 
 type RoomMessageReq struct {
 	Type proto.RoomMessageType `json:"type"`

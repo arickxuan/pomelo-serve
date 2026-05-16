@@ -4,7 +4,7 @@
 // 	protoc        (unknown)
 // source: messageId.proto
 
-package pd
+package pb
 
 import (
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
@@ -93,7 +93,7 @@ var File_messageId_proto protoreflect.FileDescriptor
 
 const file_messageId_proto_rawDesc = "" +
 	"\n" +
-	"\x0fmessageId.proto\x12\x02pd*\xa9\x01\n" +
+	"\x0fmessageId.proto\x12\x02pb*\xa9\x01\n" +
 	"\tMessageId\x12\b\n" +
 	"\x04None\x10\x00\x12\r\n" +
 	"\aCSLogin\x10ц\x03\x12\r\n" +
@@ -104,7 +104,7 @@ const file_messageId_proto_rawDesc = "" +
 	"\vSCDelFriend\x10\xa4\x8d\x06\x12\x13\n" +
 	"\rCSSendChatMsg\x10\xa5\x8d\x06\x12\x13\n" +
 	"\rSCSendChatMsg\x10\xa6\x8d\x06BM\n" +
-	"\x06com.pdB\x0eMessageIdProtoP\x01Z\vproto/pd;pd\xa2\x02\x03PXX\xaa\x02\x02Pd\xca\x02\x02Pd\xe2\x02\x0ePd\\GPBMetadata\xea\x02\x02Pdb\x06proto3"
+	"\x06com.pbB\x0eMessageIdProtoP\x01Z\vproto/pb;pb\xa2\x02\x03PXX\xaa\x02\x02Pb\xca\x02\x02Pb\xe2\x02\x0ePb\\GPBMetadata\xea\x02\x02Pbb\x06proto3"
 
 var (
 	file_messageId_proto_rawDescOnce sync.Once
@@ -120,7 +120,7 @@ func file_messageId_proto_rawDescGZIP() []byte {
 
 var file_messageId_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
 var file_messageId_proto_goTypes = []any{
-	(MessageId)(0), // 0: pd.MessageId
+	(MessageId)(0), // 0: pb.MessageId
 }
 var file_messageId_proto_depIdxs = []int32{
 	0, // [0:0] is the sub-list for method output_type

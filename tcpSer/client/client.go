@@ -3,15 +3,15 @@ package main
 import (
 	"encoding/binary"
 	"fmt"
-	"pomeloServe/framework/net"
+	"framework/net"
 
-	pd "pomeloServe/proto/pd"
+	pb "proto/pb"
 )
 
 type Client struct {
 	cli             *net.Client
 	inputHandlers   map[string]InputHandler
-	messageHandlers map[pd.MessageId]MessageHandler
+	messageHandlers map[pb.MessageId]MessageHandler
 	console         *ClientConsole
 	chInput         chan *InputParam
 	packer          net.IPacker
@@ -21,7 +21,7 @@ func NewClient() *Client {
 	c := &Client{
 		cli:             net.NewClient(":8080"),
 		inputHandlers:   map[string]InputHandler{},
-		messageHandlers: map[pd.MessageId]MessageHandler{},
+		messageHandlers: map[pb.MessageId]MessageHandler{},
 		console:         NewClientConsole(),
 		packer:          &net.NormalPacker{ByteOrder: binary.BigEndian},
 	}
@@ -50,7 +50,7 @@ func (c *Client) Run() {
 }
 
 func (c *Client) OnMessage(packet *net.ClientPacket) {
-	if handler, ok := c.messageHandlers[pd.MessageId(packet.Msg.ID)]; ok {
+	if handler, ok := c.messageHandlers[pb.MessageId(packet.Msg.ID)]; ok {
 		handler(packet)
 	}
 }

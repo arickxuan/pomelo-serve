@@ -1,12 +1,11 @@
 package database
 
 import (
+	"common/config"
+	"common/logs"
 	"context"
-	"pomeloServe/common/config"
-	"pomeloServe/common/logs"
-	"time"
-
 	"github.com/redis/go-redis/v9"
+	"time"
 )
 
 type RedisManager struct {

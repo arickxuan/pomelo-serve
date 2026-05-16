@@ -2,8 +2,8 @@ package dao
 
 import (
 	"context"
+	"core/repo"
 	"fmt"
-	"pomeloServe/core/repo"
 )
 
 const Prefix = "MSQP"

@@ -1,15 +1,15 @@
 package handler
 
 import (
+	"common"
+	"common/biz"
+	"core/repo"
+	"core/service"
 	"encoding/json"
 	"fmt"
-	"pomeloServe/common"
-	"pomeloServe/common/biz"
-	"pomeloServe/core/repo"
-	"pomeloServe/core/service"
-	"pomeloServe/framework/remote"
-	"pomeloServe/game/logic"
-	"pomeloServe/game/models/request"
+	"framework/remote"
+	"game/logic"
+	"game/models/request"
 )
 
 type GameHandler struct {

@@ -1,9 +1,9 @@
 package node
 
 import (
+	"common/logs"
 	"encoding/json"
-	"pomeloServe/common/logs"
-	"pomeloServe/framework/remote"
+	"framework/remote"
 )
 
 // App 就是nats的客户端 处理实际游戏逻辑的服务

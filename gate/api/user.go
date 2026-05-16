@@ -1,19 +1,18 @@
 package api
 
 import (
+	"common"
+	"common/biz"
+	"common/config"
+	"common/jwts"
+	"common/logs"
+	"common/rpc"
 	"context"
-	"pomeloServe/common"
-	"pomeloServe/common/biz"
-	"pomeloServe/common/config"
-	"pomeloServe/common/jwts"
-	"pomeloServe/common/logs"
-	"pomeloServe/common/rpc"
-	"pomeloServe/framework/msError"
-	"pomeloServe/proto/pd"
-	"time"
-
+	"framework/msError"
 	"github.com/gin-gonic/gin"
 	"github.com/golang-jwt/jwt/v5"
+	"time"
+	"user/pb"
 )
 
 type UserHandler struct {
@@ -25,7 +24,7 @@ func NewUserHandler() *UserHandler {
 
 func (u *UserHandler) Register(ctx *gin.Context) {
 	//接收参数
-	var req pd.RegisterRequest
+	var req pb.RegisterParams
 	err2 := ctx.ShouldBindJSON(&req)
 	if err2 != nil {
 		common.Fail(ctx, biz.RequestDataError)

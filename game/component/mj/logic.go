@@ -1,9 +1,9 @@
 package mj
 
 import (
-	"pomeloServe/common/utils"
-	"pomeloServe/game/component/mj/alg"
-	"pomeloServe/game/component/mj/mp"
+	"common/utils"
+	"game/component/mj/alg"
+	"game/component/mj/mp"
 	"sync"
 )
 

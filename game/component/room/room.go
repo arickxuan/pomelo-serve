@@ -1,15 +1,15 @@
 package room
 
 import (
-	"pomeloServe/common/logs"
-	"pomeloServe/core/models/entity"
-	"pomeloServe/framework/msError"
-	"pomeloServe/framework/remote"
-	"pomeloServe/game/component/base"
-	"pomeloServe/game/component/mj"
-	"pomeloServe/game/component/proto"
-	"pomeloServe/game/component/sz"
-	"pomeloServe/game/models/request"
+	"common/logs"
+	"core/models/entity"
+	"framework/msError"
+	"framework/remote"
+	"game/component/base"
+	"game/component/mj"
+	"game/component/proto"
+	"game/component/sz"
+	"game/models/request"
 	"sync"
 	"time"
 )

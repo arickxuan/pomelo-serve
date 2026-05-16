@@ -6,8 +6,8 @@ import (
 	gonet "net"
 	"os"
 
-	"pomeloServe/framework/net"
-	"pomeloServe/proto/pd"
+	"framework/net"
+	"proto/pb"
 
 	"google.golang.org/protobuf/proto"
 )
@@ -24,7 +24,7 @@ func main() {
 	// 要发送的消息
 	message := "Hello, TCP Server!"
 
-	req := &pd.RegisterRequest{
+	req := &pb.RegisterRequest{
 		Account:       message,
 		Password:      "123456",
 		LoginPlatform: 3,
@@ -40,7 +40,7 @@ func main() {
 
 	pkg := &net.ProtoMessage{
 		Data: msg,
-		ID:   uint64(pd.MessageId_CSLogin),
+		ID:   uint64(pb.MessageId_CSLogin),
 	}
 
 	bytes, err := packer.Pack(pkg)
